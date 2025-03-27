@@ -1,116 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HSR - Segurança de Aplicações Web</title>
-  <link href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #000;
-      color: #33ff33;
-      font-family: monospace;
+      margin: 0;
+      background-color: #0f0f0f;
+      color: #00ff88;
+      font-family: 'Share Tech Mono', monospace;
     }
-    .section {
-      margin-top: 2rem;
+    header {
+      padding: 2rem;
+      background: #000;
+      text-align: center;
     }
-    a {
-      color: #00ffff;
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #00ffcc;
     }
-    .highlight {
-      color: #ff33cc;
+    header p {
+      font-size: 1.2rem;
+      color: #00ffaa;
     }
-    .typing {
-      border-right: .15em solid #33ff33;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 3s steps(40, end) forwards, blink .75s step-end infinite;
+    nav {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 0.5rem;
     }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+    nav a {
+      margin: 0 1rem;
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
     }
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: #33ff33; }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #00ffaa;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
     }
     form input, form textarea {
-      background: #111;
-      color: #33ff33;
-      border: 1px solid #33ff33;
-      padding: 0.5em;
       width: 100%;
-      margin-top: 0.5em;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      background: #111;
+      border: 1px solid #00ffaa;
+      color: #00ff88;
     }
     form button {
-      background: #33ff33;
+      padding: 0.6rem 1.2rem;
+      background: #00ffaa;
       color: #000;
-      padding: 0.5em 1em;
       border: none;
-      margin-top: 1em;
       cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
-<body class="terminal">
+<body>
   <header>
-    <h1 class="highlight">[ HSR ]</h1>
-    <p class="typing">Segurança de Aplicações Web em Alto Nível</p>
-    <hr>
+    <h1>HSR</h1>
+    <p>Segurança de Aplicações Web</p>
   </header>
 
-  <section class="section">
-    <h2>> Quem somos</h2>
-    <p>Somos especialistas em segurança da informação com foco em aplicações web. Realizamos testes de intrusão, análise de vulnerabilidades e suporte técnico para correções em sistemas públicos e privados.</p>
+  <nav>
+    <a href="#sobre">Quem Somos</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#planos">Planos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Quem somos</h2>
+    <p>A HSR é uma empresa especializada em segurança de aplicações web. Atuamos na identificação de vulnerabilidades, testes de intrusão e suporte na correção de falhas em sistemas corporativos e públicos.</p>
   </section>
 
-  <section class="section">
-    <h2>> Serviços</h2>
+  <section id="servicos">
+    <h2>Serviços</h2>
     <ul>
-      <li>Pentest (teste de intrusão manual e automatizado)</li>
-      <li>Auditoria de aplicações web</li>
-      <li>Monitoramento de vulnerabilidades</li>
+      <li>Pentest (manual e automatizado)</li>
+      <li>Auditoria de segurança de aplicações web</li>
+      <li>Monitoramento e gestão de vulnerabilidades</li>
       <li>Relatórios técnicos e executivos</li>
     </ul>
   </section>
 
-  <section class="section">
-    <h2>> Planos</h2>
-    <pre>
-[ BÁSICO ]
-- 1 pentest anual
-- Relatório técnico
-
-[ INTERMEDIÁRIO ]
-- 2 pentests/ano
-- Suporte nas correções
-- Relatórios técnicos e executivos
-
-[ PREMIUM ]
-- Pentest trimestral
-- Monitoramento contínuo
-- Suporte mensal
-    </pre>
+  <section id="planos">
+    <h2>Planos</h2>
+    <p><strong>BÁSICO:</strong> 1 pentest anual + relatório técnico</p>
+    <p><strong>INTERMEDIÁRIO:</strong> 2 pentests/ano + suporte nas correções</p>
+    <p><strong>PREMIUM:</strong> Pentest trimestral + monitoramento + suporte contínuo</p>
   </section>
 
-  <section class="section">
-    <h2>> Contato</h2>
-    <p>Email: <a href="mailto:hsr.infosec@gmail.com">hsr.infosec@gmail.com</a></p>
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato por email: <a href="mailto:hsr.infosec@gmail.com">hsr.infosec@gmail.com</a></p>
     <form action="https://formspree.io/f/mqkrbgnd" method="POST">
-      <label>Nome:</label>
-      <input type="text" name="nome" required>
-      <label>Email:</label>
-      <input type="email" name="email" required>
-      <label>Mensagem:</label>
-      <textarea name="mensagem" rows="4" required></textarea>
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu email" required />
+      <textarea name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
       <button type="submit">Enviar</button>
     </form>
   </section>
 
-  <footer class="section">
-    <hr>
-    <p>© 2025 HSR - Todos os direitos reservados.</p>
+  <footer>
+    © 2025 HSR. Todos os direitos reservados.
   </footer>
 </body>
 </html>
