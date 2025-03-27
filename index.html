@@ -4,69 +4,89 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HSR - Segurança de Aplicações Web</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background-color: #0f0f0f;
-      color: #00ff88;
-      font-family: 'Share Tech Mono', monospace;
+      background-color: #1e1e2f;
+      color: #e0e0e0;
+      font-family: 'Fira Code', monospace;
+      line-height: 1.6;
     }
     header {
       padding: 2rem;
-      background: #000;
+      background: #282c34;
       text-align: center;
     }
     header h1 {
       margin: 0;
       font-size: 3rem;
-      color: #00ffcc;
+      color: #61dafb;
     }
     header p {
       font-size: 1.2rem;
-      color: #00ffaa;
+      color: #9acd32;
     }
     nav {
-      background: #1a1a1a;
+      background: #20232a;
       text-align: center;
-      padding: 0.5rem;
+      padding: 0.7rem;
     }
     nav a {
       margin: 0 1rem;
-      color: #00ff88;
+      color: #98c379;
       text-decoration: none;
       font-weight: bold;
     }
+    nav a:hover {
+      text-decoration: underline;
+    }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
     h2 {
-      color: #00ffaa;
+      color: #61dafb;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "\2022";
+      color: #c678dd;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
     }
     footer {
-      background: #111;
+      background: #1b1b2f;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #555;
+      color: #777;
     }
     form input, form textarea {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.6rem;
       margin: 0.5rem 0;
-      background: #111;
-      border: 1px solid #00ffaa;
-      color: #00ff88;
+      background: #2d2d44;
+      border: 1px solid #61dafb;
+      color: #e0e0e0;
     }
     form button {
       padding: 0.6rem 1.2rem;
-      background: #00ffaa;
-      color: #000;
+      background: #61dafb;
+      color: #1e1e2f;
       border: none;
       cursor: pointer;
       font-weight: bold;
+    }
+    form button:hover {
+      background: #4ec3e0;
     }
   </style>
 </head>
