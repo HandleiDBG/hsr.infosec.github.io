@@ -9,6 +9,7 @@
     body {
       background-color: #000;
       color: #33ff33;
+      font-family: monospace;
     }
     .section {
       margin-top: 2rem;
@@ -19,12 +20,43 @@
     .highlight {
       color: #ff33cc;
     }
+    .typing {
+      border-right: .15em solid #33ff33;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(40, end) forwards, blink .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: #33ff33; }
+    }
+    form input, form textarea {
+      background: #111;
+      color: #33ff33;
+      border: 1px solid #33ff33;
+      padding: 0.5em;
+      width: 100%;
+      margin-top: 0.5em;
+    }
+    form button {
+      background: #33ff33;
+      color: #000;
+      padding: 0.5em 1em;
+      border: none;
+      margin-top: 1em;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body class="terminal">
   <header>
     <h1 class="highlight">[ HSR ]</h1>
-    <p>Segurança de Aplicações Web</p>
+    <p class="typing">Segurança de Aplicações Web em Alto Nível</p>
     <hr>
   </header>
 
@@ -58,13 +90,22 @@
 [ PREMIUM ]
 - Pentest trimestral
 - Monitoramento contínuo
-- Suporte mensal 
+- Suporte mensal
     </pre>
   </section>
 
   <section class="section">
     <h2>> Contato</h2>
     <p>Email: <a href="mailto:hsr.infosec@gmail.com">hsr.infosec@gmail.com</a></p>
+    <form action="https://formspree.io/f/mqkrbgnd" method="POST">
+      <label>Nome:</label>
+      <input type="text" name="nome" required>
+      <label>Email:</label>
+      <input type="email" name="email" required>
+      <label>Mensagem:</label>
+      <textarea name="mensagem" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer class="section">
