@@ -6,35 +6,44 @@
   <title>HSR - Segurança de Aplicações Web</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #1c1c1c;
+      --primary: #1c1c1c;
+      --secondary: #295135;
+      --text: #c0c0c0;
+      --text-muted: #c0c0c0;
+      --input-bg: #1e2f25;
+      --border: #3b5e4a;
+    }
     body {
       margin: 0;
-      background-color: #1e1e2f;
-      color: #e0e0e0;
+      background-color: var(--bg-color);
+      color: var(--text);
       font-family: 'Fira Code', monospace;
       line-height: 1.6;
     }
     header {
       padding: 2rem;
-      background: #282c34;
+      background: var(--primary);
       text-align: center;
     }
     header h1 {
       margin: 0;
       font-size: 3rem;
-      color: #61dafb;
+      color: var(--text);
     }
     header p {
       font-size: 1.2rem;
-      color: #9acd32;
+      color: var(--text-muted);
     }
     nav {
-      background: #20232a;
+      background: var(--secondary);
       text-align: center;
       padding: 0.7rem;
     }
     nav a {
       margin: 0 1rem;
-      color: #98c379;
+      color: var(--text);
       text-decoration: none;
       font-weight: bold;
     }
@@ -47,8 +56,8 @@
       margin: auto;
     }
     h2 {
-      color: #61dafb;
-      border-bottom: 1px solid #444;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
       padding-bottom: 0.5rem;
     }
     ul {
@@ -57,36 +66,36 @@
     }
     ul li::before {
       content: "\2022";
-      color: #c678dd;
+      color: var(--text-muted);
       display: inline-block;
       width: 1em;
       margin-left: -1em;
     }
     footer {
-      background: #1b1b2f;
+      background: var(--primary);
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #777;
+      color: var(--text-muted);
     }
     form input, form textarea {
       width: 100%;
       padding: 0.6rem;
       margin: 0.5rem 0;
-      background: #2d2d44;
-      border: 1px solid #61dafb;
-      color: #e0e0e0;
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
     }
     form button {
       padding: 0.6rem 1.2rem;
-      background: #61dafb;
-      color: #1e1e2f;
+      background: var(--secondary);
+      color: #fff;
       border: none;
       cursor: pointer;
       font-weight: bold;
     }
     form button:hover {
-      background: #4ec3e0;
+      background: var(--primary);
     }
   </style>
 </head>
@@ -99,7 +108,6 @@
   <nav>
     <a href="#sobre">Quem Somos</a>
     <a href="#servicos">Serviços</a>
-    <a href="#planos">Planos</a>
     <a href="#contato">Contato</a>
   </nav>
 
@@ -116,13 +124,6 @@
       <li>Monitoramento e gestão de vulnerabilidades</li>
       <li>Relatórios técnicos e executivos</li>
     </ul>
-  </section>
-
-  <section id="planos">
-    <h2>Planos</h2>
-    <p><strong>BÁSICO:</strong> 1 pentest anual + relatório técnico</p>
-    <p><strong>INTERMEDIÁRIO:</strong> 2 pentests/ano + suporte nas correções</p>
-    <p><strong>PREMIUM:</strong> Pentest trimestral + monitoramento + suporte contínuo</p>
   </section>
 
   <section id="contato">
